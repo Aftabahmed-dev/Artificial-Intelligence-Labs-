@@ -1,12 +1,15 @@
 # Artificial-Intelligence-Labs-
 Artificial Intelligence — Complete Lab 
 Solutions   
- RULE-BASED SYSTEMS & FORWARD CHAINING  
+
+# RULE-BASED SYSTEMS & FORWARD CHAINING  
+
 Exercise 1: Degree Honors Rule Implementation  
 We extend the rule-based knowledge base (UNIVERSITY_KB["rules"]) to evaluate degree honors 
 conditions       
 automatically for graduating students.  
 # Rule Addition for University Knowledge Base  
+
 UNIVERSITY_KB = {  
 "rules": [  
 {  
@@ -29,6 +32,7 @@ print(f"\n[TRACE] Starting Evaluation for Student: {student_data.get('name', 'Un
 for rule in kb["rules"]:  
 rule_name = rule["name"]  
 # Evaluating condition and tracing logical deduction  
+
 is_satisfied = rule["condition"](student_data)  
 print(f" -> Evaluating Rule '{rule_name}': Result = {is_satisfied}")  
 if is_satisfied:  
@@ -36,11 +40,13 @@ derived_facts.add(rule["action"])
 print(f" [DEDUCTION FIRED] Asserted: {rule['action']}")  
 return derived_facts  
 # Test Execution  
+
 student_sample = {"name": "Alice", "cgpa": 3.85, "disciplinary_warnings": 0} results = 
 evaluate_student(student_sample, UNIVERSITY_KB)  
 Explanation: The trace prints the evaluation state for each rule before firing its action. This exposes the 
 internal inference loop during data-driven forward chaining.  
- LAB 2: 8-PUZZLE SOLVER WITH A* SEARCH  
+# LAB 2: 8-PUZZLE SOLVER WITH A* SEARCH    
+
 Heuristics & A* Core Search Implementation  
 Implementation of misplaced_tiles, manhattan_distance, and the main a_star_search loop using Python's 
 heapq.  
@@ -84,7 +90,7 @@ fewer nodes than Uninformed Search (BFS).
 Learning: Admissible heuristics ($h(n) \le h^*(n)$) guarantee optimal solution paths in A*. A tighter, more 
 informed heuristic reduces the effective branching factor, drastically lowering node exploration 
 requirements.  
- LAB 3: N-QUEENS OPTIMIZATION (N = 20)  
+# LAB 3: N-QUEENS OPTIMIZATION (N = 20)  
 Hill-Climbing & Random-Restart Algorithms  
 Comparing basic local Hill-Climbing against Random-Restart Hill-Climbing on a large 20-Queens board 
 configuration.  
